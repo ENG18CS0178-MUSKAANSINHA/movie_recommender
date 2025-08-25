@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Recommendation System</title>
+</head>
+<body>
+  <h1>🎬 Movie Recommendation System</h1>
+  <form action="/recommend" method="post">
+    <label>Select a movie:</label>
+    <select name="movie">
+      {% for m in movies %}
+      <option value="{{ m }}">{{ m }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Get Recommendations</button>
+  </form>
+</body>
+</html>
